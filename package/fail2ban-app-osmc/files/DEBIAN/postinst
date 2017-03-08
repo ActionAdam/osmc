@@ -9,15 +9,8 @@ remove_divert ()
 }
 
 if [ -z "$DPKG_MAINTSCRIPT_PACKAGE" ]; then exit 1; fi
-if [ "$1" = "configure" ]; then
+#if [ "$1" = "configure" ]; then
 
-	# only do this for install not upgrade
-	if [ -e "/var/run/${DPKG_MAINTSCRIPT_PACKAGE}_install" ]
-	then
-		rm -f "/var/run/${DPKG_MAINTSCRIPT_PACKAGE}_install"
-		systemctl disable fail2ban.service
-		systemctl stop fail2ban.service
-		systemctl enable fail2ban.service
-	fi
-	if systemctl is-enabled fail2ban.service >/dev/null; then systemctl start fail2ban.service; fi
-fi
+	# remove only diverts that prior versions of this package added which are no longer needed:
+	# remove_divert PATH_DIV PATH_ORIG
+#fi

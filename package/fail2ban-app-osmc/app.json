@@ -1,0 +1,15 @@
+{
+    "application": [
+        {
+            "id": "fail2ban-app-osmc",
+            "name": "Fail2ban",
+            "shortdesc": "Ban hosts that cause multiple authentication errors",
+            "longdesc": "Fail2ban monitors log files (e.g. /var/log/auth.log, /var/log/apache/access.log) and temporarily or persistently bans failure-prone addresses by updating existing firewall rules.  Fail2ban allows easy specification of different actions to be taken such as to ban an IP using iptables or hostsdeny rules, or simply to send a notification email.",
+            "maintained-by": "OSMC",
+            "version": "1.0",
+            "lastupdated": "2017-03-08",
+            "iconurl": "NA",
+            "iconhash": "NA"
+        }
+    ]
+}

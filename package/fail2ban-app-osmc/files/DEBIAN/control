@@ -1,0 +1,10 @@
+Origin: OSMC
+Package: fail2ban-app-osmc
+Version: 1.0
+Section: metapackages
+Essential: No
+Pre-Depends: Python3
+Architecture: all
+Priority: optional
+Maintainer: Sam G Nazarko <email@samnazarko.co.uk>
+Description: Ban hosts that cause multiple authentication errors
